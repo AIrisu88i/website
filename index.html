@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISE Women's Health Collaborative — Evidence-Based Menopause Care | Bozeman, MT</title>
+<meta name="description" content="Specialized menopause clinic in Bozeman, Montana. Evidence-based hormone therapy, comprehensive testing, and personalized midlife care. Book a consultation today.">
+<meta name="keywords" content="menopause clinic, hormone therapy, perimenopause, HRT, specialized medical services, women's health, Bozeman Montana">
+<meta property="og:title" content="RISE Women's Health Collaborative">
+<meta property="og:description" content="Evidence-based care for midlife hormone health. Clinical. Collaborative. Personalized.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#A3A793;
+  --cream:#F6F2ED;
+  --terra:#BB6B5A;
+  --charcoal:#6F695F;
+  --forest:#3E463E;
+  --border:rgba(63,70,62,0.14);
+  --text:#3E463E;
+  --muted:#6F695F;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.7;}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+a{color:inherit;}
+
+/* NAV */
+.nav{background:var(--cream);border-bottom:0.5px solid var(--border);position:sticky;top:0;z-index:50;}
+.nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-wordmark{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;letter-spacing:0.18em;color:var(--forest);line-height:1;}
+.logo-sub{font-size:8px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);display:block;margin-top:2px;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--forest);}
+.nav-cta{background:var(--forest);color:var(--cream)!important;padding:11px 20px;font-size:11px!important;letter-spacing:0.12em!important;font-weight:500;}
+.nav-toggle{display:none;background:none;border:none;font-size:24px;color:var(--forest);cursor:pointer;}
+
+/* HERO */
+.hero{background:var(--sage);position:relative;overflow:hidden;}
+.hero-inner{max-width:1120px;margin:0 auto;padding:0 24px;position:relative;min-height:520px;display:flex;align-items:center;}
+.hero-photo{position:absolute;top:0;right:0;height:100%;width:auto;max-width:55%;object-fit:cover;object-position:left center;}
+.hero-content{position:relative;z-index:2;max-width:520px;padding:80px 0;}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,54px);font-weight:300;line-height:1.12;color:var(--cream);margin-bottom:22px;}
+.hero-eyebrow{font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:var(--cream);opacity:.85;margin-bottom:20px;}
+.hero-body{font-size:16px;color:var(--cream);opacity:.88;line-height:1.8;margin-bottom:34px;max-width:380px;}
+.btn-hero{display:inline-block;background:var(--cream);color:var(--forest);padding:15px 32px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .2s;}
+.btn-hero:hover{background:#fff;}
+
+/* TRUST BAR */
+.trust-bar{background:var(--forest);}
+.trust-inner{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;}
+.trust-item{flex:1;min-width:150px;text-align:center;padding:28px 16px;border-right:0.5px solid rgba(246,242,237,0.12);}
+.trust-item:last-child{border-right:none;}
+.trust-number{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--cream);line-height:1;}
+.trust-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(246,242,237,.5);margin-top:6px;}
+
+/* SECTIONS */
+.section{padding:90px 0;}
+.section-eyebrow{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:14px;font-weight:500;}
+.section-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,44px);font-weight:300;line-height:1.12;color:var(--forest);margin-bottom:14px;}
+.section-h2 em{font-style:italic;}
+.section-body{font-size:16px;color:var(--muted);line-height:1.8;max-width:620px;margin-bottom:40px;}
+
+/* APPROACH */
+.bg-white{background:#fff;}
+.approach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border);border:0.5px solid var(--border);}
+.approach-cell{background:#fff;padding:36px 30px;}
+.approach-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--sage);line-height:1;margin-bottom:16px;}
+.approach-cell h3{font-size:16px;font-weight:500;color:var(--forest);margin-bottom:8px;}
+.approach-cell p{font-size:14px;color:var(--muted);line-height:1.7;}
+
+/* VALUES — hover expand & brighten */
+.values-section{background:var(--forest);padding:90px 0 0;}
+.values-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(28px,4vw,42px);font-weight:300;color:#E8D5CC;text-align:center;margin-bottom:56px;}
+.values-row{display:flex;height:560px;overflow:hidden;}
+.value-panel{flex:1;position:relative;overflow:hidden;cursor:pointer;transition:flex .5s cubic-bezier(.4,0,.2,1);}
+.value-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:filter .5s ease,transform .5s ease;filter:brightness(.32);}
+.value-panel:hover,.value-panel:focus-visible{flex:2.4;outline:none;}
+.value-panel:hover .value-bg,.value-panel:focus-visible .value-bg{filter:brightness(1);transform:scale(1.05);}
+.value-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);writing-mode:vertical-rl;font-size:18px;letter-spacing:.5em;text-transform:uppercase;color:rgba(246,242,237,.55);transition:opacity .35s;white-space:nowrap;z-index:2;pointer-events:none;}
+.value-panel:hover .value-label,.value-panel:focus-visible .value-label{opacity:0;}
+.value-caption{position:absolute;left:12%;right:12%;bottom:10%;background:rgba(62,70,62,.55);padding:26px 22px;text-align:center;opacity:0;transition:opacity .4s ease .15s;z-index:2;pointer-events:none;}
+.value-panel:hover .value-caption,.value-panel:focus-visible .value-caption{opacity:1;}
+.value-caption h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);margin:0 0 12px;}
+.value-caption p{font-size:14px;line-height:1.7;color:rgba(246,242,237,.88);margin:0;}
+@media (max-width:860px){
+  .values-row{flex-direction:column;height:auto;}
+  .value-panel{height:110px;flex:none;transition:height .45s cubic-bezier(.4,0,.2,1);}
+  .value-panel:hover,.value-panel:focus-visible,.value-panel.tapped{height:340px;flex:none;}
+  .value-panel.tapped .value-bg{filter:brightness(1);transform:scale(1.05);}
+  .value-panel.tapped .value-label{opacity:0;}
+  .value-panel.tapped .value-caption{opacity:1;}
+  .value-label{writing-mode:horizontal-tb;letter-spacing:.4em;}
+}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
+.service-card{background:#fff;border:0.5px solid var(--border);padding:30px;transition:border-color .2s;}
+.service-card:hover{border-color:var(--sage);}
+.service-icon{width:42px;height:42px;background:var(--cream);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--terra);}
+.service-icon svg{width:22px;height:22px;stroke:var(--terra);fill:none;stroke-width:1.5;}
+.service-card h3{font-size:16px;font-weight:500;color:var(--forest);margin-bottom:8px;}
+.service-card p{font-size:14px;color:var(--muted);line-height:1.7;}
+
+/* BOOKING */
+.booking-section{background:var(--forest);padding:90px 0;}
+.booking-eyebrow{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;font-weight:500;}
+.booking-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,44px);font-weight:300;color:var(--cream);margin-bottom:10px;line-height:1.1;}
+.booking-h2 em{font-style:italic;color:#B2CEBC;}
+.booking-sub{font-size:15px;color:rgba(246,242,237,.55);margin-bottom:44px;}
+.booking-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:44px;}
+.booking-step{border:0.5px solid rgba(246,242,237,.15);padding:26px;}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--terra);line-height:1;margin-bottom:12px;}
+.step-title{font-size:14px;font-weight:500;color:var(--cream);margin-bottom:6px;}
+.step-desc{font-size:13px;color:rgba(246,242,237,.5);line-height:1.6;}
+.booking-widget{background:var(--cream);padding:36px;max-width:760px;}
+.widget-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.widget-field{display:flex;flex-direction:column;gap:6px;}
+.widget-field label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:500;}
+.widget-field input,.widget-field select{background:#fff;border:0.5px solid var(--border);padding:13px 14px;font-size:14px;color:var(--text);font-family:'DM Sans',sans-serif;width:100%;border-radius:0;appearance:none;}
+.widget-field input:focus,.widget-field select:focus{outline:2px solid var(--sage);outline-offset:0;}
+.time-slots{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.time-slot{padding:9px 16px;border:0.5px solid var(--border);font-size:13px;color:var(--muted);cursor:pointer;background:#fff;font-family:'DM Sans',sans-serif;transition:all .15s;}
+.time-slot:hover{border-color:var(--forest);}
+.time-slot.active{background:var(--forest);color:var(--cream);border-color:var(--forest);}
+.widget-submit{width:100%;background:var(--forest);color:var(--cream);border:none;padding:17px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;margin-top:20px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;}
+.widget-submit:hover{background:#2e352e;}
+.hipaa-note{font-size:11px;color:var(--muted);text-align:center;margin-top:12px;letter-spacing:0.06em;}
+
+/* PRACTITIONERS */
+.practitioners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:760px;}
+.practitioner-card{background:#fff;border:0.5px solid var(--border);}
+.practitioner-img{height:200px;background:var(--sage);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:var(--cream);letter-spacing:0.08em;}
+.practitioner-info{padding:24px;}
+.practitioner-info h3{font-size:16px;font-weight:500;color:var(--forest);margin-bottom:3px;}
+.practitioner-role{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin-bottom:12px;font-weight:500;}
+.practitioner-info p{font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+.edu-card{border:0.5px solid var(--border);background:var(--cream);}
+.bg-white .edu-card{background:var(--cream);}
+.edu-card-top{height:3px;background:var(--terra);}
+.edu-card-body{padding:24px;}
+.edu-tag{font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:10px;}
+.edu-card-body h3{font-size:15px;font-weight:500;color:var(--forest);margin-bottom:8px;line-height:1.45;}
+.edu-card-body p{font-size:13px;color:var(--muted);line-height:1.65;}
+.edu-link{display:inline-block;margin-top:14px;font-size:12px;color:var(--terra);font-weight:500;letter-spacing:0.06em;text-decoration:none;}
+.edu-link:hover{text-decoration:underline;}
+
+/* FAQ */
+.faq-list{max-width:760px;}
+.faq-item{border-bottom:0.5px solid var(--border);}
+.faq-item:first-child{border-top:0.5px solid var(--border);}
+.faq-q{font-size:16px;font-weight:500;color:var(--forest);display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:22px 0;background:none;border:none;width:100%;text-align:left;font-family:'DM Sans',sans-serif;}
+.faq-toggle{color:var(--terra);font-size:24px;font-weight:300;line-height:1;transition:transform .2s;flex-shrink:0;margin-left:16px;}
+.faq-item.open .faq-toggle{transform:rotate(45deg);}
+.faq-a{font-size:14px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:22px;}
+
+/* COLLAB */
+.collab{background:var(--sage);padding:90px 0;text-align:center;}
+.collab-eyebrow{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--cream);opacity:.75;margin-bottom:14px;font-weight:500;}
+.collab h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,42px);font-weight:300;color:var(--cream);margin-bottom:14px;line-height:1.12;}
+.collab h2 em{font-style:italic;}
+.collab p{font-size:15px;color:rgba(246,242,237,.8);margin:0 auto 32px;max-width:560px;}
+.btn-cream{display:inline-block;background:var(--cream);color:var(--forest);padding:15px 34px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;text-decoration:none;}
+
+/* CTA STRIP */
+.cta-strip{background:var(--terra);padding:54px 0;}
+.cta-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.cta-strip h3{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,34px);font-weight:300;color:var(--cream);margin-bottom:6px;}
+.cta-strip h3 em{font-style:italic;}
+.cta-strip p{font-size:14px;color:rgba(246,242,237,.75);}
+.btn-outline-cream{display:inline-block;background:transparent;border:1px solid var(--cream);color:var(--cream);padding:14px 28px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;text-decoration:none;white-space:nowrap;transition:all .2s;}
+.btn-outline-cream:hover{background:var(--cream);color:var(--terra);}
+
+/* FOOTER */
+.footer{background:var(--forest);padding:70px 0 36px;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-wordmark{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.18em;color:var(--cream);margin-bottom:4px;}
+.footer-subtitle{font-size:8px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(246,242,237,.4);margin-bottom:16px;}
+.footer p{font-size:13px;color:rgba(246,242,237,.5);line-height:1.8;}
+.footer h4{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(246,242,237,.35);margin-bottom:16px;font-weight:500;}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:9px;}
+.footer-links a{font-size:14px;color:rgba(246,242,237,.6);text-decoration:none;}
+.footer-links a:hover{color:var(--cream);}
+.footer-bottom{border-top:0.5px solid rgba(246,242,237,.1);padding-top:26px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(246,242,237,.35);flex-wrap:wrap;gap:12px;}
+.hipaa-badge{border:0.5px solid rgba(246,242,237,.2);padding:6px 16px;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#B2CEBC;}
+
+/* RESPONSIVE */
+@media (max-width: 860px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:0.5px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .nav-toggle{display:block;}
+  .hero-photo{position:absolute;opacity:0.35;max-width:100%;right:-10%;}
+  .hero-content{max-width:100%;}
+  .widget-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;gap:36px;}
+  .cta-inner{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <svg width="36" height="36" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <ellipse cx="17" cy="18" rx="11" ry="14" stroke="#BB6B5A" stroke-width="0.9"/>
+        <path d="M12 24 C13 18,17 16,20 12 C21 10,20 8,18 9 C16 10,15 14,17 17 C19 20,22 20,21 23" stroke="#BB6B5A" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+        <path d="M17 6 L17.5 4.5 L18 6 L19.5 6 L18.2 7 L18.7 8.5 L17 7.5 L15.3 8.5 L15.8 7 Z" fill="#BB6B5A" opacity="0.85" transform="scale(0.7) translate(7,1)"/>
+      </svg>
+      <span>
+        <span class="logo-wordmark">R I S E</span>
+        <span class="logo-sub">Womens Health Collaborative</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#approach">Approach</a>
+      <a href="#services">Services</a>
+      <a href="#team">Team</a>
+      <a href="#resources">Resources</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#book">Book Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img class="hero-photo" src="images/hero-patient.webp" alt="A woman in her midlife looking toward the light, calm and confident" loading="eager">
+    <div class="hero-content">
+      <h1 class="hero-h1">Evidence-Based Care for Midlife Hormone Health.</h1>
+      <p class="hero-eyebrow">Clinical. Collaborative. Personalized.</p>
+      <p class="hero-body">We take the guesswork out of hormone care with comprehensive testing, expert guidance, and treatments tailored to you.</p>
+      <a class="btn-hero" href="#book">Book a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-number">1,200+</div><div class="trust-label">Patients served</div></div>
+    <div class="trust-item"><div class="trust-number">100%</div><div class="trust-label">Menopause focus</div></div>
+    <div class="trust-item"><div class="trust-number">NCMP</div><div class="trust-label">Certified providers</div></div>
+    <div class="trust-item"><div class="trust-number">HIPAA</div><div class="trust-label">Fully compliant</div></div>
+  </div>
+</div>
+
+<section class="section bg-white" id="approach">
+  <div class="container">
+    <p class="section-eyebrow">Our approach</p>
+    <h2 class="section-h2">Refined. Clinical. <em>Restorative.</em></h2>
+    <p class="section-body">We don't treat symptoms in isolation. We look at the full picture of your hormonal health, your history, and your goals — then build a plan around you.</p>
+    <div class="approach-grid">
+      <div class="approach-cell"><div class="approach-num">01</div><h3>Comprehensive intake</h3><p>In-depth history, lab work, and symptom mapping before your first appointment.</p></div>
+      <div class="approach-cell"><div class="approach-num">02</div><h3>Personalized treatment</h3><p>Evidence-based HRT and integrative options matched to your biology and preferences.</p></div>
+      <div class="approach-cell"><div class="approach-num">03</div><h3>Ongoing partnership</h3><p>Regular monitoring, dose adjustments, and open communication between visits.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section" aria-label="Our values">
+  <div class="values-title">We believe in</div>
+  <!-- Replace each .value-bg background-color with background-image:url('images/values/...jpg')
+       when you have brand photography. The brightness/zoom hover effect works the same. -->
+  <div class="values-row">
+    <div class="value-panel" tabindex="0">
+      <div class="value-bg" style="background-color:#7A8471;"></div>
+      <span class="value-label">Empowerment</span>
+      <div class="value-caption">
+        <h3>Empowerment</h3>
+        <p>You are the expert on your own body. We give you the knowledge and tools to act on it.</p>
+      </div>
+    </div>
+    <div class="value-panel" tabindex="0">
+      <div class="value-bg" style="background-color:#A3A793;"></div>
+      <span class="value-label">Transparency</span>
+      <div class="value-caption">
+        <h3>Transparency</h3>
+        <p>Clear pricing, honest evidence, and open conversations about every treatment option.</p>
+      </div>
+    </div>
+    <div class="value-panel" tabindex="0">
+      <div class="value-bg" style="background-color:#8C9B85;"></div>
+      <span class="value-label">Holistic Health</span>
+      <div class="value-caption">
+        <h3>Holistic Health</h3>
+        <p>Our bodies are intricately connected, from the mind, to the body, to the spirit — one aspect of well-being affects another.</p>
+      </div>
+    </div>
+    <div class="value-panel" tabindex="0">
+      <div class="value-bg" style="background-color:#C9B8A8;"></div>
+      <span class="value-label">Originality</span>
+      <div class="value-caption">
+        <h3>Originality</h3>
+        <p>You are a completely unique system, and you deserve a custom treatment plan that aligns with your current state, and bridges to your future vision.</p>
+      </div>
+    </div>
+    <div class="value-panel" tabindex="0">
+      <div class="value-bg" style="background-color:#6F695F;"></div>
+      <span class="value-label">Sisterhood</span>
+      <div class="value-caption">
+        <h3>Sisterhood</h3>
+        <p>A community of women walking the same path — you never navigate this chapter alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <p class="section-eyebrow">Services offered</p>
+    <h2 class="section-h2">Everything your midlife health <em>deserves</em></h2>
+    <p class="section-body">Every service we offer is designed specifically for women navigating perimenopause, menopause, and beyond.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 4 L4 9 a6 6 0 0 0 12 0 L16 4 M10 19 a4 4 0 0 0 8 0 v-3 M18 13 a2 2 0 1 0 0 .01"/></svg></div>
+        <h3>Hormone Therapy (HRT)</h3><p>Bioidentical and conventional options. Fully individualized, monitored, and adjusted over time.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 4 a4 4 0 0 1 4 4 c2 0 3 2 3 4 s-1 4 -3 4 a4 4 0 0 1 -8 0 c-2 0 -3-2-3-4 s1-4 3-4 a4 4 0 0 1 4-4 z M12 4 v16"/></svg></div>
+        <h3>Cognitive & Mood Care</h3><p>Brain fog, anxiety, and depression addressed as the physiological events they are.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 20 C6 15 3 11 3 8 a4.5 4.5 0 0 1 9-1 a4.5 4.5 0 0 1 9 1 c0 3-3 7-9 12 z"/></svg></div>
+        <h3>Cardiovascular & Bone Health</h3><p>Proactive screening and preventive care for the risks that accelerate after menopause.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20 14 A8 8 0 1 1 10 4 a7 7 0 0 0 10 10 z"/></svg></div>
+        <h3>Sleep & Vasomotor Symptoms</h3><p>Hot flashes, night sweats, and disrupted sleep treated with clinical and lifestyle approaches.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 20 L8 13 L12 16 L17 9 L21 12 M3 20 L21 20"/></svg></div>
+        <h3>Metabolic Health</h3><p>Weight changes and metabolic shifts understood in their full hormonal context.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 3 L9 9 L4 18 a2 2 0 0 0 2 3 L18 21 a2 2 0 0 0 2-3 L15 9 L15 3 M7 3 L17 3 M7 15 L17 15"/></svg></div>
+        <h3>Specialty Lab Testing</h3><p>Advanced hormone panels, thyroid, adrenal, and cardiometabolic labs — ordered and interpreted by us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-section" id="book">
+  <div class="container">
+    <p class="booking-eyebrow">Book your visit</p>
+    <h2 class="booking-h2">Your next chapter <em>starts here</em></h2>
+    <p class="booking-sub">New and returning patients welcome. Telehealth and in-clinic available.</p>
+    <div class="booking-steps">
+      <div class="booking-step"><div class="step-num">01</div><div class="step-title">Choose visit type</div><div class="step-desc">New patient, follow-up, or telehealth</div></div>
+      <div class="booking-step"><div class="step-num">02</div><div class="step-title">Pick your time</div><div class="step-desc">Live availability from provider calendars</div></div>
+      <div class="booking-step"><div class="step-num">03</div><div class="step-title">Confirm securely</div><div class="step-desc">Encrypted intake forms via patient portal</div></div>
+    </div>
+    <div class="booking-widget">
+      <!-- NOTE: Replace this demo form with your HIPAA-compliant booking embed
+           (e.g., Acuity Scheduling with BAA, Jane App, or your EHR's widget).
+           Do NOT collect patient health information through a plain HTML form. -->
+      <div class="widget-row">
+        <div class="widget-field"><label for="visit-type">Visit type</label>
+          <select id="visit-type"><option>New patient consultation</option><option>Follow-up appointment</option><option>Telehealth check-in</option><option>Lab review</option></select>
+        </div>
+        <div class="widget-field"><label for="provider">Provider</label>
+          <select id="provider"><option>No preference</option><option>Ingrid E. Heinemann, MSN, FNP-C</option></select>
+        </div>
+      </div>
+      <div class="widget-row">
+        <div class="widget-field"><label for="date">Date</label><input id="date" type="date"></div>
+        <div class="widget-field"><label for="mode">Mode</label>
+          <select id="mode"><option>In-clinic</option><option>Telehealth</option></select>
+        </div>
+      </div>
+      <div class="widget-field">
+        <label>Available times</label>
+        <div class="time-slots">
+          <button type="button" class="time-slot">8:30 AM</button>
+          <button type="button" class="time-slot active">9:00 AM</button>
+          <button type="button" class="time-slot">10:15 AM</button>
+          <button type="button" class="time-slot">11:00 AM</button>
+          <button type="button" class="time-slot">2:30 PM</button>
+          <button type="button" class="time-slot">4:00 PM</button>
+        </div>
+      </div>
+      <button class="widget-submit" type="button" onclick="alert('Connect this button to your HIPAA-compliant booking system (Acuity, Jane App, or EHR embed).')">Request Appointment</button>
+      <p class="hipaa-note">🔒 HIPAA-compliant · Encrypted · Never shared</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="team">
+  <div class="container">
+    <p class="section-eyebrow">Your care team</p>
+    <h2 class="section-h2">Clinicians who specialize in <em>nothing else</em></h2>
+    <p class="section-body">Every provider at RISE has pursued dedicated training in menopause medicine. This isn't a subspecialty — it is the entirety of our practice.</p>
+    <div class="practitioners-grid">
+      <div class="practitioner-card">
+        <div class="practitioner-img">I · H</div>
+        <div class="practitioner-info">
+          <h3>Ingrid E. Heinemann, MSN, FNP-C</h3>
+          <div class="practitioner-role">Founder & Clinical Provider</div>
+          <p>Board-certified family nurse practitioner with advanced training in menopause medicine and hormone optimization.</p>
+        </div>
+      </div>
+      <div class="practitioner-card">
+        <div class="practitioner-img">+ Add</div>
+        <div class="practitioner-info">
+          <h3>Practitioner placeholder</h3>
+          <div class="practitioner-role">Role · Credentials</div>
+          <p>Bio copy will appear here. Replace with your second provider's credentials and specialization.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white" id="resources">
+  <div class="container">
+    <p class="section-eyebrow">Resources & education</p>
+    <h2 class="section-h2">Knowledge you can <em>act on</em></h2>
+    <p class="section-body">Written by our clinicians. Reviewed for accuracy. Designed to help you feel informed, not overwhelmed.</p>
+    <div class="edu-grid">
+      <div class="edu-card"><div class="edu-card-top"></div><div class="edu-card-body"><div class="edu-tag">Guide</div><h3>What is perimenopause — and when does it start?</h3><p>Symptoms can begin a decade before your last period.</p><a class="edu-link" href="#">Read →</a></div></div>
+      <div class="edu-card"><div class="edu-card-top"></div><div class="edu-card-body"><div class="edu-tag">Explainer</div><h3>HRT: what the current evidence actually says</h3><p>Separating headlines from what the latest data shows.</p><a class="edu-link" href="#">Read →</a></div></div>
+      <div class="edu-card"><div class="edu-card-top"></div><div class="edu-card-body"><div class="edu-tag">Tool</div><h3>Symptom tracker for your next visit</h3><p>A fillable log for hot flashes, sleep, mood, and more.</p><a class="edu-link" href="#">Download →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <p class="section-eyebrow">Common questions</p>
+    <h2 class="section-h2">What patients ask us <em>most</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Do I need a referral to become a patient? <span class="faq-toggle">+</span></button>
+        <div class="faq-a">No referral is required. Book directly through our website or by calling the practice. New patients complete a brief intake form before their first visit.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you accept insurance? <span class="faq-toggle">+</span></button>
+        <div class="faq-a">We accept most major commercial insurance plans and Medicare. Please contact us to verify your specific plan before booking.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I be seen if I'm still having periods? <span class="faq-toggle">+</span></button>
+        <div class="faq-a">Absolutely. Many of our patients are in perimenopause and still menstruating. You don't need to have reached your final menstrual period to benefit from specialized care.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is telehealth available? <span class="faq-toggle">+</span></button>
+        <div class="faq-a">Most follow-up, medication review, and education appointments are available via telehealth. Initial consultations are encouraged in-clinic when possible.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collab">
+  <div class="container">
+    <p class="collab-eyebrow">Collaboration</p>
+    <h2>We work <em>with</em> your existing care team</h2>
+    <p>RISE functions as a specialist partner alongside your primary care physician, OB-GYN, and other providers — not a replacement. We share notes, coordinate care, and keep everyone aligned.</p>
+    <a class="btn-cream" href="#">Learn about our referral process</a>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="cta-inner">
+    <div><h3><em>Same-week</em> appointments available.</h3><p>No long wait lists. New patients welcome now.</p></div>
+    <a class="btn-outline-cream" href="#book">Book Consultation</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-wordmark">R I S E</div>
+        <div class="footer-subtitle">Womens Health Collaborative</div>
+        <p>Evidence-based menopause care. Bozeman, Montana.<br>hello@risehealthco.com · 406.123.4567<br>risehealthco.com</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">Our approach</a></li>
+          <li><a href="#team">Our team</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal & compliance</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Notice of privacy practices</a></li>
+          <li><a href="#">HIPAA information</a></li>
+          <li><a href="#">Medical disclaimer</a></li>
+          <li><a href="#">Accessibility (WCAG 2.1)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RISE Women's Health Collaborative. All rights reserved.</span>
+      <div class="hipaa-badge">HIPAA Compliant</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.time-slot').forEach(function(slot){
+  slot.addEventListener('click', function(){
+    document.querySelectorAll('.time-slot').forEach(function(s){ s.classList.remove('active'); });
+    slot.classList.add('active');
+  });
+});
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    q.parentElement.classList.toggle('open');
+  });
+});
+document.querySelectorAll('.value-panel').forEach(function(p){
+  p.addEventListener('click', function(){
+    document.querySelectorAll('.value-panel').forEach(function(o){ if(o!==p) o.classList.remove('tapped'); });
+    p.classList.toggle('tapped');
+  });
+});
+</script>
+
+</body>
+</html>
